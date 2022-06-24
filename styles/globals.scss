@@ -1,20 +1,35 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	background: #141414 !important;
+	color: #ffffff !important;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.movie-app > .row {
+	overflow-x: auto;
+	flex-wrap: nowrap;
 }
 
-* {
-  box-sizing: border-box;
+.image-container {
+	position: relative;
+	transition: transform 0.2s;
+}
+
+.image-container:hover {
+	cursor: pointer;
+	transform: scale(1.02);
+}
+
+.image-container:hover .overlay {
+	opacity: 1;
+}
+
+.overlay {
+	position: absolute;
+	background: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	transition: 0.5s ease;
+	opacity: 0;
+	bottom: 0;
+	font-size: 20px;
+	padding: 20px;
+	text-align: center;
 }
