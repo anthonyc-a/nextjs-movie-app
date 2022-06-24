@@ -27,9 +27,9 @@ const App = () => {
   }, [searchValue]);
 
   useEffect(() => {
-    const movieFavourites = JSON.parse(
-      localStorage.getItem("react-movie-app-favourites")
-    );
+    const item: any = localStorage.getItem("react-movie-app-favourites");
+
+    const movieFavourites = JSON.parse(item);
 
     if (movieFavourites) {
       setFavourites(movieFavourites);
